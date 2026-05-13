@@ -16,7 +16,7 @@ func ConvertFile(cFilePath *C.char, cOutputDir *C.char) *C.char {
 	filePath := C.GoString(cFilePath)
 	outputDir := C.GoString(cOutputDir)
 
-	// 2. 调用核心逻辑 (复用你之前的逻辑)
+	// 2. 调用核心逻辑 (复用之前的逻辑)
 	ncm, err := ncmcrypt.NewNeteaseCloudMusic(filePath)
 	if err != nil {
 		return C.CString("读取失败: " + err.Error())

@@ -25,7 +25,7 @@ Windows 端也可以使用[ncmdump-gui](https://git.taurusxin.com/taurusxin/ncmd
 * Android Studio & Android SDK
 * `gomobile` 工具:
     ```bash
-    cd exc
+    cd ext
     go install golang.org/x/mobile/cmd/gomobile@latest
     gomobile init
     ```
@@ -38,7 +38,7 @@ Windows 端也可以使用[ncmdump-gui](https://git.taurusxin.com/taurusxin/ncmd
 
 ```bash
 # 如果遇到 javac 报错，请检查 JAVA_HOME 环境变量
-cd exc
+cd ext
 gomobile bind -target=android -androidapi 21 -o ../ncmdump_mobile/android/app/libs/ncmdump.aar ./mobile
 go build -buildmode=c-shared -o ../ncmdump_mobile/windows/runner/ncmdump.dll export.go ./desktop
 go build -buildmode=c-shared -o ../ncmdump_mobile/linux/libncmdump.so export.go ./desktop
